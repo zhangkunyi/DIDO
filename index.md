@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## DIDO: Deep Inertial Quadrotor Dynamical Odometry
 
 You can use the [editor on GitHub](https://github.com/zhangkunyi/DIDO/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
