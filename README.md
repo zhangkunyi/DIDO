@@ -36,10 +36,10 @@ python3 De_bias_acc_main.py \
 --out_dir ../train_outputs
 ```
 
---root_dir ../../dataset \ # root directory of data
---train_list ../../dataset/train.txt \ # the list of training data
---val_list ../../dataset/val.txt \  # the list of validation data
---out_dir ../train_outputs \  # output directory
+* --root_dir ../../dataset \ # root directory of data
+* --train_list ../../dataset/train.txt \ # the list of training data
+* --val_list ../../dataset/val.txt \  # the list of validation data
+* --out_dir ../train_outputs \  # output directory
 
 Execute De_bias_acc_main.py for **testing** 
 
@@ -53,10 +53,10 @@ python3 De_bias_acc_main.py \
 --out_dir ../test_outputs
 ```
 
---root_dir ../../dataset \ # root directory of data
---test_list ../../dataset/test.txt \ # the list of testing data
---model_path ../train_outputs/checkpoints/checkpoint_*.pt \ # saving path of de_acc_bias_net
---out_dir test_outputs  # output directory (there are the velocity figures obtained by acceleration integration using the true attitude in this directory)
+* --root_dir ../../dataset \ # root directory of data 
+* --test_list ../../dataset/test.txt \ # the list of testing data
+* --model_path ../train_outputs/checkpoints/checkpoint_*.pt \ # saving path of de_acc_bias_net
+* --out_dir test_outputs  # output directory (there are the velocity figures obtained by acceleration integration using the true attitude in this directory)
 
 # De_bias_gyr
 
@@ -74,10 +74,10 @@ python3 De_bias_gyr_main.py \
 --out_dir ../train_outputs
 ```
 
---root_dir ../../dataset \ # root directory of data
---train_list ../../dataset/train.txt \ # the list of training data
---val_list ../../dataset/val.txt \  # the list of validation data
---out_dir ../train_outputs \  # output directory
+* --root_dir ../../dataset \ # root directory of data
+* --train_list ../../dataset/train.txt \ # the list of training data
+* --val_list ../../dataset/val.txt \  # the list of validation data
+* --out_dir ../train_outputs \  # output directory
 
 # Rotation_ekf
 
@@ -93,11 +93,11 @@ python3 generate_net_acc_net_gyr.py \
 --out_dir ../output
 ```
 
---root_dir ../../dataset \ # root directory of data
---network_acc_path ../../De_bias_acc/train_outputs/checkpoints/checkpoint_*.pt # saving path of de_acc_bias_net
---network_gyr_path ../../De_bias_acc/train_outputs/checkpoints/checkpoint_*.pt # saving path of de_gyr_bias_net
---test_list ../../dataset/gen_list.txt # the list of all the data in the dataset
---out_dir ../output # output directory
+* --root_dir ../../dataset \ # root directory of data
+* --network_acc_path ../../De_bias_acc/train_outputs/checkpoints/checkpoint_*.pt # saving path of de_acc_bias_net
+* --network_gyr_path ../../De_bias_acc/train_outputs/checkpoints/checkpoint_*.pt # saving path of de_gyr_bias_net
+* --test_list ../../dataset/gen_list.txt # the list of all the data in the dataset
+* --out_dir ../output # output directory
 
 
 
@@ -117,11 +117,11 @@ python3 Rotation_stage.py \
 --out_dir ../output
 ```
 
---root_dir ../../dataset \ # root directory of data
---network_acc_out_path ../output/net_acc/ \ # saving path of acceleration after using de_bias_net
---network_gyr_out_path ../output/net_gyr/ \# saving path of angular velocity after using de_bias_net
---test_list ../../dataset/test.txt \ # the testing data
---out_dir ../output   # output directory
+* --root_dir ../../dataset \ # root directory of data
+* --network_acc_out_path ../output/net_acc/ \ # saving path of acceleration after using de_bias_net
+* --network_gyr_out_path ../output/net_gyr/ \# saving path of angular velocity after using de_bias_net
+* --test_list ../../dataset/test.txt \ # the testing data
+* --out_dir ../output   # output directory
 
 
 
@@ -173,11 +173,11 @@ python3 V_P_net_main.py \
 --train_axis z_axis
 ```
 
---root_dir ../../dataset \ # root directory of data
---train_list ../../dataset/train.txt \ # the list of training data
---val_list ../../dataset/val.txt \ # the list of validation data
---out_dir ../train_outputs_x  # output directory
---train_axis x_axis  # the axis of velocity and position are trained
+* --root_dir ../../dataset \ # root directory of data
+* --train_list ../../dataset/train.txt \ # the list of training data
+* --val_list ../../dataset/val.txt \ # the list of validation data
+* --out_dir ../train_outputs_x  # output directory
+* --train_axis x_axis  # the axis of velocity and position are trained
 
 2、Testing
 
@@ -193,12 +193,12 @@ python3 V_P_net_main.py \
 --z_model ../train_outputs_z/checkpoints/checkpoint_*.pt
 ```
 
---root_dir ../../dataset \ # root directory of data
---test_list ../../dataset/train.txt \ # the list of testing data
---out_dir ../test_outputs  # output directory
---x_model ../train_outputs_x/checkpoints/checkpoint*.pt \ # the saving path of v_p_net about x axis
---y_model ../train_outputs_y/checkpoints/checkpoint*.pt \ # the saving path of v_p_net about y axis
---z_model ../train_outputs_z/checkpoints/checkpoint_*.pt \ # the saving path of v_p_net about z axis
+* --root_dir ../../dataset \ # root directory of data
+* --test_list ../../dataset/train.txt \ # the list of testing data
+* --out_dir ../test_outputs  # output directory
+* --x_model ../train_outputs_x/checkpoints/checkpoint*.pt \ # the saving path of v_p_net about x axis
+* --y_model ../train_outputs_y/checkpoints/checkpoint*.pt \ # the saving path of v_p_net about y axis
+* --z_model ../train_outputs_z/checkpoints/checkpoint_*.pt \ # the saving path of v_p_net about z axis
 
 
 
@@ -235,10 +235,10 @@ python3 Res_dynamic_main.py \
 --out_dir ../train_outputs
 ```
 
---root_dir ../../dataset \ # root directory of data
---train_list ../../dataset/train.txt \ # the list of training data
---val_list ../../dataset/val.txt \  # the list of validation data
---out_dir train_outputs \  # output directory
+* --root_dir ../../dataset \ # root directory of data
+* --train_list ../../dataset/train.txt \ # the list of training data
+* --val_list ../../dataset/val.txt \  # the list of validation data
+* --out_dir train_outputs \  # output directory
 
 # Translation_ekf
 
@@ -255,11 +255,11 @@ python3 Translation_stage.py \
 --network_q_path ../../Rotation_ekf/output/ekf_q/ \
 ```
 
---root_dir ../../dataset \ # root directory of data
---test_list ../../dataset/test.txt \  # the list of testing data
---out_dir ../output \  # output directory
---network_dyn_path ../../Res_dynamic/train_outputs/checkpoints/checkpoint_*.pt # the path of res_dynamics_net
---network_v_p_path ../../V_P_net/src/test_outputs/vp/ # the path of the result of v_p_net
---network_acc_path ../../Rotation_ekf/output/net_acc/ # the path of acceleration modified by de_bias net
---network_gyr_path ../../Rotation_ekf/output/net_gyr/ # the path of angular velocity modified by de_bias net
---network_q_path ../../Rotation_ekf/output/ekf_q/ # the path of attitude got from rotation ekf
+* --root_dir ../../dataset \ # root directory of data
+* --test_list ../../dataset/test.txt \  # the list of testing data
+* --out_dir ../output \  # output directory
+* --network_dyn_path ../../Res_dynamic/train_outputs/checkpoints/checkpoint_*.pt # the path of res_dynamics_net
+* --network_v_p_path ../../V_P_net/src/test_outputs/vp/ # the path of the result of v_p_net
+* --network_acc_path ../../Rotation_ekf/output/net_acc/ # the path of acceleration modified by de_bias net
+* --network_gyr_path ../../Rotation_ekf/output/net_gyr/ # the path of angular velocity modified by de_bias net
+* --network_q_path ../../Rotation_ekf/output/ekf_q/ # the path of attitude got from rotation ekf
