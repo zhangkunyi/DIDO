@@ -1,4 +1,4 @@
-# DIDO
+# DIDO:Deep Inertial Quadrotor Dynamical Odometry
 
 ## Dataset
 
