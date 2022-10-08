@@ -1,6 +1,6 @@
 # DIDO
 
-## dataset
+## Dataset
 
 * Each folder contains a ‘’**data.hdf5**‘’ containing：
 
@@ -58,7 +58,7 @@ python3 De_bias_acc_main.py \
 * --model_path ../train_outputs/checkpoints/checkpoint_*.pt \ # saving path of de_acc_bias_net
 * --out_dir test_outputs  # output directory (there are the velocity figures obtained by acceleration integration using the true attitude in this directory)
 
-# De_bias_gyr
+## De_bias_gyr
 
 The neural network to reduce bias of the gyroscope measurments
 
@@ -79,7 +79,7 @@ python3 De_bias_gyr_main.py \
 * --val_list ../../dataset/val.txt \  # the list of validation data
 * --out_dir ../train_outputs \  # output directory
 
-# Rotation_ekf
+## Rotation_ekf
 
 First, using the De_bias_net to estimate the acceleration and angular velocity.
 
@@ -131,7 +131,7 @@ NOTE: There are some results in the output directory
 * **euler**: figures of the attitude estimation (**euler_pred**: the euler angle estimated by directly new angular velocity integration;  **euler_gt_euler**: the ground truth euler angle; **ekf_euler**: euler angle estimated by  rotation ekf)
 * **euler_pred_error**: figures of the attitude estimation error (**euler_pred_error**: error of euler_pred; **ekf_euler_error**: error of ekf_euler)
 
-# V_P_net
+## V_P_net
 
 The attitude estimated from rotation_ekf is used in validation and testing
 
@@ -220,7 +220,7 @@ NOTE: There are some results in the output directory
 
 * **imu_v_in_world_frame**：figure of velocity estimation estimation
 
-# Res_dynamic
+## Res_dynamic
 
 Training
 
@@ -240,7 +240,7 @@ python3 Res_dynamic_main.py \
 * --val_list ../../dataset/val.txt \  # the list of validation data
 * --out_dir train_outputs \  # output directory
 
-# Translation_ekf
+## Translation_ekf
 
 ```
 cd Translation_ekf/src
